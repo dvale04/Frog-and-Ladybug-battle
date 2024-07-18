@@ -1,0 +1,193 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    position: relative; 
+    min-height:200vh;
+
+
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ff0000, #00ff00);
+    /* Gradient from left to right */
+  }
+#container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 120px; 
+}
+
+.name-logo {
+    width: 250px;
+    margin-top: -30px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+#board {
+    position: relative;
+    top: 0; 
+    left: calc(50% - (540px / 2));
+    height: 540px;
+    width: 540px;
+    background-color: green;
+    border: 10px solid navy;
+    margin-left: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+#game-update {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 2px solid greenyellow;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: calc(50% + (540px / 2) + 50px); 
+    z-index: 2; 
+}
+
+#player-icons img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+#winner {
+    position: absolute;
+    top: -60px; 
+    right: 0; 
+}
+
+#opponentOptions {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -47px;
+}
+
+#opponentOptions button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#opponentOptions button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.tile {
+    height: 30px;
+    width: 30px; 
+    margin: 3px;
+    background-color: white; 
+    cursor: pointer;
+}
+
+.ladybug-piece {
+    background-image: url('./Lb.png');
+    background-size: cover;
+}
+
+.frog-piece {
+    background-image: url('./Fgg.png');
+    background-size: cover; 
+}
+
+#start {
+    position: absolute; 
+    top: 195px;
+    right: 20px;
+}
+
+#start button {
+    margin: 10px;
+    color: white;
+    padding: 10px 20px; 
+    background-color: orange;
+    font-family: "Varela Round", sans-serif;
+    cursor: pointer;
+}
+
+#start button:hover {
+    background-color: white;
+    color: black;
+}
+
+.frognladybug .name-logo {
+    width: 150px;
+    margin-top: 18px;
+}
+
+.footer {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #f0f0f0;
+}
+.footer hr {
+    width: 80%; 
+    margin: auto; 
+    border-color: white; 
+}
+.footer p {
+    margin: 5px 0; 
+}
+
+
+@media (max-width: 768px) {
+    #board {
+        width: 80%; 
+        height: auto; 
+        max-width: 540px; 
+        max-height: 540px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+   
+        #game-update {
+            width: 80%; 
+            max-width: 300px; 
+            height: auto; 
+            max-height: 400px; 
+            left: auto; 
+            right: 20px;
+        }
+        .name-logo {
+            max-width: 80%; 
+            margin-left: 0; 
+            margin-right: 0;
+        }
+        h3 {
+            font-size: 1.2em; 
+            margin-top: 5px; 
+        }
+    }
+    

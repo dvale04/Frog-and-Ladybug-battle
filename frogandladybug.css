@@ -44,12 +44,13 @@ body {
 #board {
     position: relative;
     top: 0; 
-    left: calc(50% - (540px / 2));
-    height: 540px;
-    width: 540px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 540px;
+    aspect-ratio: 1 / 1;
     background-color: green;
     border: 10px solid navy;
-    margin-left: 20px;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -94,18 +95,24 @@ body {
 
 #opponentOptions button {
     margin: 0 10px;
-    padding: 10px 20px;
+    padding: 4px 3px;
     background-color: white;
     color: black;
     border: none;
-    border-radius: 5px;
+    
     cursor: pointer;
 }
 
-#opponentOptions button:hover {
-    background-color: #0056b3;
+#opponent1.selected {
+    background-color: #0800FF;
     color: white;
 }
+#opponent2.selected {
+    background-color: #06FF01;
+    color: black;
+}
+
+
 
 .tile {
     height: 30px;
@@ -155,7 +162,7 @@ body {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #f0f0f0;
 }

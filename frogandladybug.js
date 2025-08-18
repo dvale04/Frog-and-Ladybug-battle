@@ -442,10 +442,18 @@ function setWinner(r, c)
 
 document.getElementById("opponent1").addEventListener("click", function() {
     selectedOpponent = "Human";
+     // Remove the 'selected' class from all opponent buttons
+    document.querySelectorAll('#opponentOptions button').forEach(btn => btn.classList.remove('selected'));
+    // Add the 'selected' class to the clicked button
+    this.classList.add("selected");
     startNewGame();
 });
 document.getElementById("opponent2").addEventListener("click", function() {
     selectedOpponent = "Computer";
+    // Remove the 'selected' class from all opponent buttons
+    document.querySelectorAll('#opponentOptions button').forEach(btn => btn.classList.remove('selected'));
+    // Add the 'selected' class to the clicked button
+    this.classList.add("selected");
     startNewGame();
 });
 document.getElementById("Start").addEventListener("click", function(){
@@ -458,6 +466,8 @@ function startNewGame() {
         currPlayer = playerLadybug;
         let winner = document.getElementById("winner");
         winner.innerText = "";
+
+        
 }
     
 

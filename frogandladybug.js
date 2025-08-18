@@ -488,16 +488,16 @@ window.addEventListener('scroll', () => {
     // Change background gradient based on scroll position
     if (scrollTop + windowHeight >= docHeight + 100) {
         // If scrolled past the bottom + 100px
-        document.body.style.background = 'linear-gradient(to top, #ff0000, #00ff00)';
+        document.body.style.background = 'linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255))';
     } else {
         // Default gradient background
-        document.body.style.background = 'linear-gradient(to bottom, #ff0000, #00ff00)';
+        document.body.style.background = 'linear-gradient(to bottom,rgb(255, 255, 255),rgb(255, 255, 255))';
     }
 });
 
 // Optional: Adjust initial gradient in case of direct page load
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.background = 'linear-gradient(to bottom, #ff0000, #00ff00)';
+    document.body.style.background = 'linear-gradient(to bottom,rgb(255, 255, 255),rgb(255, 255, 255))';
 });
 
 

@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 body {
     font-family: 'Times New Roman', Times, serif;
+=======
+
+@font-face {
+    font-family: "Arial W05 Narrow 5310067";
+    src: url("./fonts/ArialW05Narrow5310067.woff2") format("woff2"),
+         url("./fonts/ArialW05Narrow5310067.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "Arial W05 Narrow 5310067", sans-serif;
+>>>>>>> 3bc637c (Save my local work before merge)
     margin: 0;
     display: flex;
     flex-direction: column;

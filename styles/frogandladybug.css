@@ -1,8 +1,8 @@
 
 @font-face {
     font-family: "Arial W05 Narrow 5310067";
-    src: url("./fonts/ArialW05Narrow5310067.woff2") format("woff2"),
-         url("./fonts/ArialW05Narrow5310067.woff") format("woff");
+    src: url("fonts/ArialW05Narrow5310067.woff2") format("woff2"),
+         url("fonts/ArialW05Narrow5310067.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -123,12 +123,12 @@ body {
 }
 
 .ladybug-piece {
-    background-image: url('./Lb.png');
+    background-image: url('../images/Lb.png');
     background-size: cover;
 }
 
 .frog-piece {
-    background-image: url('./Fgg.png');
+    background-image: url('../images/Fgg.png');
     background-size: cover; 
 }
 

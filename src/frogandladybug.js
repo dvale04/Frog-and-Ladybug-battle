@@ -442,10 +442,18 @@ function setWinner(r, c)
 
 document.getElementById("opponent1").addEventListener("click", function() {
     selectedOpponent = "Human";
+     // Remove the 'selected' class from all opponent buttons
+    document.querySelectorAll('#opponentOptions button').forEach(btn => btn.classList.remove('selected'));
+    // Add the 'selected' class to the clicked button
+    this.classList.add("selected");
     startNewGame();
 });
 document.getElementById("opponent2").addEventListener("click", function() {
     selectedOpponent = "Computer";
+    // Remove the 'selected' class from all opponent buttons
+    document.querySelectorAll('#opponentOptions button').forEach(btn => btn.classList.remove('selected'));
+    // Add the 'selected' class to the clicked button
+    this.classList.add("selected");
     startNewGame();
 });
 document.getElementById("Start").addEventListener("click", function(){
@@ -458,6 +466,8 @@ function startNewGame() {
         currPlayer = playerLadybug;
         let winner = document.getElementById("winner");
         winner.innerText = "";
+
+        
 }
     
 
@@ -488,16 +498,16 @@ window.addEventListener('scroll', () => {
     // Change background gradient based on scroll position
     if (scrollTop + windowHeight >= docHeight + 100) {
         // If scrolled past the bottom + 100px
-        document.body.style.background = 'linear-gradient(to top, #ff0000, #00ff00)';
+        document.body.style.background = 'linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255))';
     } else {
         // Default gradient background
-        document.body.style.background = 'linear-gradient(to bottom, #ff0000, #00ff00)';
+        document.body.style.background = 'linear-gradient(to bottom,rgb(255, 255, 255),rgb(255, 255, 255))';
     }
 });
 
 // Optional: Adjust initial gradient in case of direct page load
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.background = 'linear-gradient(to bottom, #ff0000, #00ff00)';
+    document.body.style.background = 'linear-gradient(to bottom,rgb(255, 255, 255),rgb(255, 255, 255))';
 });
 
 
